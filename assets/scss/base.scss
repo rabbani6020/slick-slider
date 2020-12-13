@@ -10,11 +10,11 @@
 @import "mixin";
 
 //Import Fonts
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
 /* ===========================
 // Typography
 ==============================*/
-*{
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -22,7 +22,7 @@
 body {
    margin: 0;
    padding: 0;
-   font-family: 'Roboto', sans-serif;
+   font-family: "Roboto", sans-serif;
    font-size: 16px;
    line-height: 26px;
    color: #000;
@@ -36,7 +36,7 @@ h5,
 h6 {
    color: $black-color;
    font-weight: 700;
-   letter-spacing: .5px;
+   letter-spacing: 0.5px;
 }
 h1 {
    font-size: 40px;
@@ -58,7 +58,7 @@ h5 {
    font-size: 20px;
    line-height: 30px;
 }
-h6{
+h6 {
    font-size: 16px;
    line-height: 26px;
 }
@@ -72,7 +72,8 @@ html {
    position: relative;
    text-rendering: optimizeLegibility;
 }
-ul,li {
+ul,
+li {
    padding: 0;
    margin: 0;
    list-style: none;
@@ -94,19 +95,69 @@ a {
 
 input,
 textarea,
-select,
-:focus {
+select :focus {
    outline: 0;
    box-shadow: 0;
 }
 
+.section-padding {
+   padding: 100px 0;
+}
+
 @for $i from 1 through 7 {
-	.gutter-#{$i}0{
-		margin-top: - ($i*10px)/2 !important;
-		margin-bottom: - ($i*10px)/2 !important;
-		> li, > div{
-			padding-top: ($i*10px)/2 !important;
-			padding-bottom: ($i*10px)/2 !important;
-		}
-	}
+   .gutter-#{$i}0 {
+      margin-top: -($i * 10px)/2 !important;
+      margin-bottom: -($i * 10px)/2 !important;
+      > li,
+      > div {
+         padding-top: ($i * 10px)/2 !important;
+         padding-bottom: ($i * 10px)/2 !important;
+      }
+   }
+}
+
+.block-content {
+   .banner-title {
+      font-size: 50px;
+      line-height: 60px;
+      margin: 0 0 30px;
+      color: $white-color;
+   }
+   .block-title {
+      font-size: 36px;
+      line-height: 46px;
+      margin: 0 0 30px;
+      color: $white-color;
+   }
+   p {
+      color: $white-color;
+      margin: 0 0 30px;
+      &:last-of-type {
+         margin: 0;
+      }
+   }
+   .btn-wrap {
+      margin-top: 40px;
+   }
+}
+
+.btn {
+   font-size: 18px;
+   line-height: 28px;
+   color: $white-color;
+   font-weight: 700;
+   background-color: $primary-color;
+   padding: 10px 30px;
+   @include transition();
+   border: 2px solid transparent;
+   &:hover {
+      border-color: $primary-color;
+      background-color: transparent;
+      color: $primary-color;
+   }
+
+   &:focus {
+      outline: 0;
+      box-shadow: none;
+   }
 }

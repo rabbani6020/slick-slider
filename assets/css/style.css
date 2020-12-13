@@ -5,7 +5,7 @@
 
 1.    Import files
 2.    Header
-3.   
+3.    Banner
 4.   
 5    
 6.   
@@ -92,7 +92,8 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-ul, li {
+ul,
+li {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -119,15 +120,146 @@ a:hover {
 
 input,
 textarea,
-select,
-:focus {
+select :focus {
   outline: 0;
   box-shadow: 0;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.gutter-10 {
+  margin-top: -5px !important;
+  margin-bottom: -5px !important;
+}
+.gutter-10 > li,
+.gutter-10 > div {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.gutter-20 {
+  margin-top: -10px !important;
+  margin-bottom: -10px !important;
+}
+.gutter-20 > li,
+.gutter-20 > div {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.gutter-30 {
+  margin-top: -15px !important;
+  margin-bottom: -15px !important;
+}
+.gutter-30 > li,
+.gutter-30 > div {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+.gutter-40 {
+  margin-top: -20px !important;
+  margin-bottom: -20px !important;
+}
+.gutter-40 > li,
+.gutter-40 > div {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.gutter-50 {
+  margin-top: -25px !important;
+  margin-bottom: -25px !important;
+}
+.gutter-50 > li,
+.gutter-50 > div {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+
+.gutter-60 {
+  margin-top: -30px !important;
+  margin-bottom: -30px !important;
+}
+.gutter-60 > li,
+.gutter-60 > div {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
+.gutter-70 {
+  margin-top: -35px !important;
+  margin-bottom: -35px !important;
+}
+.gutter-70 > li,
+.gutter-70 > div {
+  padding-top: 35px !important;
+  padding-bottom: 35px !important;
+}
+
+.block-content .banner-title {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 0 0 30px;
+  color: #fff;
+}
+.block-content .block-title {
+  font-size: 36px;
+  line-height: 46px;
+  margin: 0 0 30px;
+  color: #fff;
+}
+.block-content p {
+  color: #fff;
+  margin: 0 0 30px;
+}
+.block-content p:last-of-type {
+  margin: 0;
+}
+.block-content .btn-wrap {
+  margin-top: 40px;
+}
+
+.btn {
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  font-weight: 700;
+  background-color: #EB6A52;
+  padding: 10px 30px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  border: 2px solid transparent;
+}
+.btn:hover {
+  border-color: #EB6A52;
+  background-color: transparent;
+  color: #EB6A52;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
 }
 
 /*==========================
 // start  header 
 ===========================*/
 /*==========================
-// start   
+// start   banner
 ===========================*/
+.single-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.product-item {
+  margin: 0 20px;
+}
